@@ -1,0 +1,93 @@
+    @CHARSET "UTF-8";
+
+    a {
+      text-decoration: none;
+      color: #155593;
+    }
+
+    body.wp-admin .osu_poll div:after {
+      clear: both;
+      content: "";
+      display: block;
+      height: 0;
+      overflow: hidden;
+      visibility: hidden;
+    }
+
+    .osu_poll, .osu_poll_widget {
+      color: #000;
+      font-family: Arial;
+      font-size: 12px;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .osu_poll {
+    	width: 280px;
+    }
+
+    .osu_poll_widget {
+      width: inherit;
+      text-align: left;
+    }
+
+    #osu_poll_question,
+    #osu_poll_question_widget {
+      font-style: italic;
+      font-size: 15px;
+      margin-bottom: 20px;
+    }
+
+    .osu_poll_answers {
+      font-size: 12px;
+      width: 100%;
+    }
+
+    body.wp-admin .osu_poll_answer {
+      margin: 5px 0;
+    }
+
+    .osu_poll_votes_bar {
+      min-width: 70px;
+    }
+
+    .osu_poll_votes_bar img {
+      height: 10px;
+      display: inline-block;
+    }
+
+    .osu_poll_answer td {
+      padding: 5px 10px 0 0;
+    }
+
+    #osu_poll_submit {
+      font-size: 12px;
+      margin-top: 15px;
+    }
+
+    #osu_poll_vote {
+      color: #fff;
+      background: #aa0000 none;
+      box-shadow: none;
+      border: 0;
+      border-radius: 3px;
+      padding: 3px 12px;
+      margin-right: 5px;
+      border: 2px solid #aa0000;
+    }
+
+    #osu_poll_vote:hover,
+    #osu_poll_vote:focus {
+      border: 2px solid #880000;
+
+    }
+
+    #osu_poll_vote:active {
+      background-color: #880000;
+      border: 2px solid #660000;
+    }
+
+    .osu_poll_votes_pct {
+      float: right;
+    }
+
