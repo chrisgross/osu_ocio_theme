@@ -4,7 +4,7 @@ Description:    Responsive test theme for OSU Mobile Resources site
 Author:         Chris Gross
 Author URI:     http://ocio.osu.edu
 Template:       responsive
-Version:        0.5.8
+Version:        0.5.9
 */
 
 @import url("../responsive/style.css");
@@ -302,7 +302,7 @@ th, td, table {
 /* Content */
 
 #container-content {
-  background-color: #fff;
+  background: url("images/bg-content-fullscreen.jpg") repeat-y scroll center top #fdfdfd;
   clear: both;
   position: relative;
   z-index: 90;
@@ -310,7 +310,7 @@ th, td, table {
 }
 
 .sidebar-layout #container-content {
-  background: url("images/bg-content.jpg") repeat-y scroll center top #fff;
+  background: url("images/bg-content.jpg") repeat-y scroll center top #fdfdfd;
 }
 
 #container-content .grid {
@@ -355,6 +355,16 @@ th, td, table {
 
 .content-blog .navigation a {
   padding: 4px 0;
+}
+
+.error404 .post-entry {
+  float: left;
+}
+
+#content .error404 img.four-oh-four {
+  float: right;
+  padding-bottom: 10px;
+  padding-right: 10px;
 }
 
 /* Table overrides */
@@ -413,7 +423,8 @@ table.newslink th.label {
 
 /* Sidebar */
 
-.sidebar-layout #container-content > .wrapper > div:first-child {
+.sidebar-layout #container-content > .wrapper > div:first-child,
+.error404 #container-content > .wrapper > div:first-child {
   padding-top: 10px;
 }
 
@@ -693,7 +704,6 @@ table.newslink th.label {
 
 
 
-
 /* Responsive - Large Screens */
 
 @media only screen and (max-width : 980px) {
@@ -711,11 +721,25 @@ table.newslink th.label {
     background-position: 50% top;
   }
 
+  .error404 #container-content > .wrapper > div:first-child {
+    padding: 0;
+  }
+
   .sidebar-layout #container-content > .wrapper > div:first-child > div,
+  .error404 #container-content > .wrapper > div:first-child > div,
   .sidebar-layout #container-content > .wrapper h6 {
     padding:  1px 20px 20px 20px;
   }
 
+  .error404 .post-entry {
+    max-width: 70%;
+  }
+
+  #content .error404 img.four-oh-four {
+    max-width: 25%;
+    padding-top: 15px;
+    padding-right: 0;
+  }
 }
 
 @media only screen and (max-width : 920px) {
@@ -728,6 +752,7 @@ table.newslink th.label {
   .sidebar-layout #container-content {
     background-position: 50.8% top;
   }
+
 }
 
 @media only screen and (max-width : 800px) {
@@ -771,6 +796,13 @@ table.newslink th.label {
   #widgets .widget-wrapper {
     padding: 15px 20px 0 20px;
     margin: 0;
+  }
+
+  #content .error404 .post-entry,
+  #content .error404 img.four-oh-four {
+    float: none;
+    max-width: 100%;
+    padding: 0;
   }
 }
 
@@ -847,11 +879,10 @@ table.newslink th.label {
     margin-right: 2%;
   }
 
-   .buttons li:last-child,
+  .buttons li:last-child,
   #widgets .buttons li:last-child {
     margin-right: 0;
   }
-
 
   /* Mobile Navigation */
 

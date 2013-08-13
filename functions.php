@@ -35,7 +35,7 @@ if (function_exists('register_sidebar')) {
 add_filter('body_class','my_class_names');
 
 function my_class_names($classes) {
-    if (!in_array('blog', $classes) && !in_array('page-template-full-width-page-php', $classes)) {
+    if (!in_array('blog', $classes) && !in_array('page-template-full-width-page-php', $classes) && !in_array('error404', $classes)) {
       $classes[] = 'sidebar-layout';
     }
 
@@ -84,7 +84,7 @@ function custom_wp_trim_excerpt($text) {
             $text = implode(' ', $words);
         }
     }
-    return apply_filters('wp_trim_excerpt', $text, $raw_excerpt);
+    return apply_filters('wp_trim_excerpt', force_balance_tags($text), $raw_excerpt);
     }
 
 remove_filter('get_the_excerpt', 'wp_trim_excerpt');
