@@ -4,7 +4,7 @@ Description:    Responsive test theme for OSU Mobile Resources site
 Author:         Chris Gross
 Author URI:     http://ocio.osu.edu
 Template:       responsive
-Version:        0.5.9
+Version:        0.6
 */
 
 @import url("../responsive/style.css");
@@ -365,6 +365,14 @@ th, td, table {
   float: right;
   padding-bottom: 10px;
   padding-right: 10px;
+}
+
+#content .alignleft {
+  margin-right: 30px;
+}
+
+#content .alignright {
+  margin-left: 30px;
 }
 
 /* Table overrides */
